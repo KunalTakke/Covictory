@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/Dashboard.css' %}" >{% endblock css %}
+{% block content %}
+<div class="container">
+    <div class="tags">
+        <div id="cont1">
+            <h1>Total Active Cases</h1>
+            <p class="case"></p>
+        </div>
+        <div id="cont2">
+            <h1>Total Deaths Cases</h1>
+            <p class="death"></p>
+        </div>
+        <div id="cont3">
+            <h1>Total Recovered Cases</h1>
+            <p class="recover"></p>
+        </div>
+    </div>	
+</div>
+<div class="grid-header">
+    <h1>Vaccines Available in India</h1>
+</div>
+<div class="grid">
+    
+    <!-- Card 1 -->
+    <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://static.toiimg.com/photo/msid-80342557/80342557.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Covishield</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="https://www.bharatbiotech.com/covaxin.html" class="btn btn-primary">More Details</a>
+          </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://images.news18.com/ibnlive/uploads/2021/01/1609592779_covaxin.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Covaxin</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="https://www.seruminstitute.com/product_covishield.php" class="btn btn-primary">More Details</a>
+          </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://www.arabnews.pk/sites/default/files/styles/n_670_395/public/2021/02/11/2468641-246331421.jpg?itok=Q_-d_cbW" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Sputnik V</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="https://sputnikvaccine.com/" class="btn btn-primary">More Details</a>
+          </div>
+    </div>
+    <!-- Card 4 -->
+    <!-- <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://newslivetv.com/wp-content/uploads/2021/02/pfizer.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Pfizer</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="https://sputnikvaccine.com/" class="btn btn-primary">More Details</a>
+          </div>
+    </div> -->
+</div>
+<!-- Scripts -->
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<!-- Custom Scripts -->
+<script type="text/javascript" src="{% static 'js/Api.js' %}"></script>
+{% endblock content %}

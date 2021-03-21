@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/ContactForm.css' %}" >{% endblock css %}
+{% block content %}
+    <div class="container mt-5">
+      <div class="col">
+        <h2>Contact Us</h2>
+        <p>Use the form below to share your questions, ideas, comments and feedback</p>
+      </div>
+  
+    </div>
+    <br>
+        <div class="container">
+          <form method="POST" >
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">First Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." value="" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Last Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." value="" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="state">State</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="state" name="state" placeholder="Your State" value="" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email_Id</label>
+              </div>
+              <div class="col-75">
+                <input type="email" id="email" name="email" placeholder="Your email_id" >
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="number">Mobile_Number</label>
+              </div>
+              <div class="col-75">
+                <input type="number" id="number" name="mob_num" placeholder="Your mobile number" required>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Subject</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <button type="submit" class="btn btn-info mt-1">Submit</button>
+  
+            </div>
+          </form>
+        </div>
+{% endblock %}
+
